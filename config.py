@@ -19,6 +19,7 @@ class Config:
             raise ValueError("Port attribute of Class instance must be non-negative integers")
     @classmethod
     def from_env(cls)-> "Config":
+        # this function reads the environment variables and returns a Config instance. If checks whether Port value is an integer and raises a ValueError if not. It also checks whether the app_env value is valid and raises a ValueError if not (From None such that only this error is directly displayed).
         raw_port = os.environ.get("PORT", "8000") # Get port or default value, int(str)
         try:
             port = int(raw_port)
