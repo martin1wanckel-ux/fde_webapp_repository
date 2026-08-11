@@ -2,8 +2,11 @@ import os
 from dataclasses import dataclass
 
 ALLOWED_ENVIRONMENTS = ["development", "staging", "production"]
+ALLOWED_ENVIRONMENTS_SET = frozenset(ALLOWED_ENVIRONMENTS)
 @dataclass
+
 class Config:
+    """ This class is used to store configuration values for the application. It includes validation for the app_env and port attributes. """
     port: int
     app_env: str
     log_level: str
@@ -28,4 +31,5 @@ class Config:
 
 if __name__ == "__main__":
     config = Config.from_env()
+    print(config.__doc__)
     print(config)
