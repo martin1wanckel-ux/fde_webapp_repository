@@ -5,6 +5,12 @@ ALLOWED_ENVIRONMENTS = ["development", "staging", "production"]
 ALLOWED_ENVIRONMENTS_SET = frozenset(ALLOWED_ENVIRONMENTS)
 @dataclass
 
+# THere is a lot here. ON one side, we need to make an int out of the port from str type, which needs to be translated to integer "abc" would not be the case. 
+# We want the port to be non negative.
+# The Environments should only belong to the allowed environments. 
+
+
+
 class Config:
     """ This class is used to store configuration values for the application. It includes validation for the app_env and port attributes. """
     port: int
@@ -23,8 +29,8 @@ class Config:
         raw_port = os.environ.get("PORT", "8000") # Get port or default value, int(str)
         try:
             port = int(raw_port)
-        except ValueError:
-            raise ValueError(f"Invalid PORT value: {raw_port}. Must be an integer.") from None
+        except ValueError: # catch the error
+            raise ValueError(f"Invalid PORT value: {raw_port}. Must be an integer.") from None # raise the error without the context of the original exception
         return cls(
             port = port, 
             app_env = os.getenv("APP_ENV", "development"),
