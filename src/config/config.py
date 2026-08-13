@@ -4,7 +4,6 @@ from dataclasses import dataclass
 ALLOWED_ENVIRONMENTS = ["development", "staging", "production"]
 ALLOWED_ENVIRONMENTS_SET = frozenset(ALLOWED_ENVIRONMENTS)
 @dataclass
-
 # THere is a lot here. ON one side, we need to make an int out of the port from str type, which needs to be translated to integer "abc" would not be the case. 
 # We want the port to be non negative.
 # The Environments should only belong to the allowed environments. 
@@ -40,3 +39,6 @@ if __name__ == "__main__":
     config = Config.from_env()
     print(config.__doc__)
     print(config)
+
+
+# Ein HTTP-Request ist eine Nachricht, die ein Client (wie dein Webbrowser) an einen Server sendet, um Daten oder eine Website abzurufen. Er besteht aus einer Startzeile (Methode und Ziel), Headern (Zusatzinfos) und optional einem Body (Nutzdaten). Ausführliche technische Details findest du bei den MDN Web Docs.Wichtige HTTP-MethodenGET: Holt Daten vom Server (z. B. eine Webseite laden).POST: Sendet neue Daten an den Server (z. B. ein Formular abschicken).PUT: Ersetzt eine vorhandene Ressource komplett.DELETE: Löscht eine Ressource auf dem Server.
