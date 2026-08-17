@@ -1,0 +1,11 @@
+Ein HTTP-Request ist eine Nachricht, die ein Client (wie dein Webbrowser) an einen Server sendet, um Daten oder eine Website abzurufen. Er besteht aus einer Startzeile (Methode und Ziel), Headern (Zusatzinfos) und optional einem Body (Nutzdaten). Ausführliche technische Details findest du bei den MDN Web Docs.Wichtige HTTP-MethodenGET: Holt Daten vom Server (z. B. eine Webseite laden).POST: Sendet neue Daten an den Server (z. B. ein Formular abschicken).PUT: Ersetzt eine vorhandene Ressource komplett.DELETE: Löscht eine Ressource auf dem Server.
+
+Eine REST API ist eine Schnittstelle für Software. Sie folgt den Regeln der REST-Architektur (Representational State Transfer). Sie lässt zwei unterschiedliche Computerprogramme über das Internet Daten austauschen. Dabei nutzt sie das normale HTTP-Protokoll, das auch Webseiten im Browser lädt.Wie eine REST API funktioniertClient und Server: Ein Client (wie eine App auf dem Handy oder eine Webseite) fragt etwas an. Der Server verarbeitet die Anfrage und sendet die Daten zurück.Zustandslos (Stateless): Jede Anfrage steht für sich allein. Der Server speichert keine Daten über den Nutzer zwischen den Anfragen.Endpunkte (URLs): Die Ziele für die Daten haben eine klare Adresse im Netz, zum Beispiel /nutzer oder /produkte.Datenformat: Die Antworten kommen meistens im kompakten Format JSON zurück.Wichtige HTTP-Methoden (Befehle)GET: Daten vom Server holen (lesen).POST: Neue Daten auf dem Server erstellen.PUT: Vorhandene Daten auf dem Server ändern oder ersetzen.DELETE: Daten auf dem Server löschen.
+
+Quick Comparison
+Feature 	PUT 	PATCH
+Purpose 	Full resource replacement 	Partial resource updates
+Data Handling 	Sends the entire resource 	Sends only the changes
+Idempotency 	Always idempotent 	Not always idempotent
+Bandwidth Usage 	Higher 	Lower
+Resource Creation 	Can create a new resource 	Typically fails if resource missing
