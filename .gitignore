@@ -1,2 +1,6 @@
 .venv
 day-01/python_exercise.py
+src/api/__pycache__/main.cpython-311.pyc
+src/config/__pycache__/config.cpython-311.pyc
+uv.lock
+src/config/__pycache__/config.cpython-311.pyc
