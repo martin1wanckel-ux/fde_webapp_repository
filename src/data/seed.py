@@ -21,6 +21,10 @@ def initialize_fde_db():
             FOREIGN KEY (user_id) REFERENCES users(id)
         )
     """)
+    # Create an INDEX for user_id in Orders
+    cursor.execute("""
+        CREATE INDEX IF NOT EXISTS idx_orders_user_id ON orders(user_id)
+    """)
     conn.commit()
     conn.close()
 

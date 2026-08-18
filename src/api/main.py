@@ -27,3 +27,8 @@ async def config():
 # .\.venv\Scripts\Activate.ps1
 # pip install "fastapi[standard]"
 # uvicorn src.api.main:app --reload
+
+# information on the server 
+# Client → TCP/IP (OS) → Socket (uvicorn hört zu) 
+# → HTTP-Parsing (uvicorn) → ASGI-Event (uvicorn → FastAPI) 
+# → Routing + Handler (FastAPI/dein Code) → Response zurück den Weg

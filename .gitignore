@@ -6,3 +6,6 @@ uv.lock
 src/config/__pycache__/config.cpython-311.pyc
 src/config/__pycache__/config.cpython-311.pyc
 src/config/__pycache__/config.cpython-311.pyc
+src/config/__pycache__/config.cpython-311.pyc
+src/data/fde_lab.db
+src/data/user_orders.sql
