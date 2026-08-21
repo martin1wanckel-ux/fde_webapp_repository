@@ -1,7 +1,7 @@
 import sqlite3
 
 
-def initialize_fde_db():
+def initialize_fde_db()-> None:
     conn = sqlite3.connect("fde_lab.db")
     cursor = conn.cursor()
 
@@ -28,7 +28,7 @@ def initialize_fde_db():
     conn.commit()
     conn.close()
 
-def add_entries():
+def add_entries()-> None:
     conn = sqlite3.connect("fde_lab.db")
     cursor = conn.cursor()
     cursor.execute("INSERT INTO users (name) VALUES (?)" , ("Alice",)) # Insert Alice
